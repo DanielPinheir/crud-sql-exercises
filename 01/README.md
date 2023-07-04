@@ -30,11 +30,8 @@ create table usuarios (
 
 3 - Após ter inserido os registros na tabela `usuarios`, foi identificado que o registro que possui o e-mail `raja.feugiat@nonummy.com` informou seu nome errado. Faça uma atualização nesse registro alterando o nome para `Raja W. Coffey Thomas`.
 
-4 - O cliente percebeu que na tabela enviada anteriormente para inserir os usuários no banco de dados tinha um problema. Dois registros possui o mesmo e-mail e ao atualizar o nome do registro de e-mail `raja.feugiat@nonummy.com` essa alteração acabou afetando os dois registros que possui o mesmo e-mail. Isso precisa ser resolvido urgentemente e a solução é alterar o campo e-mail para não permitir e-mails duplicados, nem que seja necessário apagar todos os registros com o mesmo e-mail. Para alterar a tabela `usuarios` execute o `código sql` abaixo, porém, antes é necessário excluir um dos dois registros duplicados para evitar erro ao tentar alterar a tabela.
+4 - O cliente percebeu que na tabela enviada anteriormente para inserir os usuários no banco de dados tinha um problema. Dois registros possui o mesmo e-mail e ao atualizar o nome do registro de e-mail `raja.feugiat@nonummy.com` essa alteração acabou afetando os dois registros que possui o mesmo e-mail. Isso precisa ser resolvido urgentemente e a solução é alterar o campo e-mail para não permitir e-mails duplicados, nem que seja necessário apagar todos os registros com o mesmo e-mail. Altere a tabela `usuarios` porém, antes exclua um dos dois registros duplicados para evitar erro ao tentar alterar a tabela.
 
-```sql
-alter table usuarios add constraint email_unique_usuarios unique(email);
-```
 
 5 - Ufa!! Ainda bem que o problema foi resolvido. O cliente acabou de mandar outra tabela com mais cadastros para serem inseridos na tabela `usuarios`.
 
@@ -46,11 +43,7 @@ alter table usuarios add constraint email_unique_usuarios unique(email);
 | Joel M. Hartman     | 18    | montes.nascetur@odiotristique.co.uk  | c4Q27D7O |
 | Elmo K. Greer       | 18    | risus.Duis@eget.ca                   | e3P92I7R |
 
-**Atenção** O gerente do projeto entrou em contato e pediu para adicionar um novo campo a tabela `usuarios` que aceite somente dois valores (Verdadeiro ou Falso). Nesse campo, caso não seja informado nada ao inserir um registro, significa que por padrão é verdadeiro. Ahh... O campo chamado `situacao`, representa a situação do usuário, se está ativo ou não. Para criar o campo, execute o `código sql` abaixo:
-
-```sql
-alter table usuarios add column situacao boolean default true;
-```
+**Atenção** O gerente do projeto entrou em contato e pediu para adicionar um novo campo a tabela `usuarios` que aceite somente dois valores (Verdadeiro ou Falso). Nesse campo, caso não seja informado nada ao inserir um registro, significa que por padrão é verdadeiro. Ahh... O campo chamado `situacao`, representa a situação do usuário, se está ativo ou não. Crie o campo.
 
 6 - A solicitação anterior não era a toa. O cliente acabou de mandar o primeiro usuario que ele precisa inativar. Sendo assim, você precisa atualizar o registro que possui o e-mail `montes.nascetur@odiotristique.co.uk` alterando a situação dele para falso.
 
