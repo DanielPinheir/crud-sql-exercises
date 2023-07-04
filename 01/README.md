@@ -49,11 +49,7 @@ create table usuarios (
 
 7 - Temos uma outra pequena demanda. O registro que possui o e-mail `risus.Duis@eget.ca` solicitou alteração da sua senha para `k9P31H1O`.
 
-**Atenção** Só agora o gerente percebeu que seria melhor armazenar a data de nascimento do usuário no lugar da idade. Será necessário excluir o campo `idade` e adicionar um novo campo chamado `data_nascimento` que receberá uma data no formado `YYYY-MM-DD` que corresponde a `Ex.: 2021-05-30`. Para essa alteração, execute o `código sql` abaixo:
-
-```sql
-alter table usuarios drop column idade, add column data_nascimento date;
-```
+**Atenção** Só agora o gerente percebeu que seria melhor armazenar a data de nascimento do usuário no lugar da idade. Será necessário excluir o campo `idade` e adicionar um novo campo chamado `data_nascimento` que receberá uma data no formado `YYYY-MM-DD` que corresponde a `Ex.: 2021-05-30`. Realize essa alteração.
 
 8 - Nesse momento, foi solicitado de cada usuário que enviasse a data de nascimento para que fosse atualizada no banco de dados e até o momento apenas dois enviaram. Faça a atualização dos respectivos registros:
 
@@ -62,11 +58,7 @@ a) O registro que possui o e-mail `nec.metus.facilisis@vitaealiquet.edu` nasceu 
 
 9 - Depois de tanto solicitar a data de nascimento para os usuários e até o momento somente dois enviaram, o cliente resolveu excluir definitivamente todos os registros que estão sem a data de nascimento. Esse Job precisa ser feito com muito cuidado, portanto, prossiga com cautela.
 
-**Atenção** Para que nenhum outro registro seja adicionado sem a data de nascimento, o gerente solicitou que adicionasse uma restrição ao campo `data_nascimento` para que fosse um campo obrigatório. Sendo assim, solicitou que o `código sql` a seguir fosse executado:
-
-```sql
-alter table usuarios alter column data_nascimento set not null;
-```
+**Atenção** Para que nenhum outro registro seja adicionado sem a data de nascimento, o gerente solicitou que adicionasse uma restrição ao campo `data_nascimento` para que fosse um campo obrigatório. Crie um `código sql` para que essa demanda seja atendida.
 
 10 - Agora que a tabela de usuários parece ter ficado pronta, restaram apenas dois registros pendente de cadastro. Cadastre os registros a seguir para concluir seu Job.
 

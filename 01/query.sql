@@ -56,3 +56,40 @@ UPDATE usuarios
 SET situacao = false 
 WHERE email = 'montes.nascetur@odiotristique.co.uk';
 
+-- Challenge 7
+-- Update password
+UPDATE usuarios 
+SET senha = 'k9P31H1O' 
+WHERE email = 'risus.Duis@eget.ca';
+
+-- DELETE age column 
+-- ADD  birth_date column
+ALTER TABLE usuarios 
+DROP column idade, 
+ADD column data_nascimento DATE;
+
+-- Challenge 8
+-- Update birth date
+UPDATE usuarios 
+SET data_nascimento = '1991-09-29'
+WHERE email = 'auctor@duiFuscediam.edu';
+
+UPDATE usuarios 
+SET data_nascimento = '1988-11-02'
+WHERE email = 'nec.metus.facilisis@vitaealiquet.edu';
+
+-- Challenge 9
+-- DELETE records
+DELETE from usuarios
+WHERE data_nascimento IS NULL; 
+
+-- Update colunm propertie
+ALTER TABLE usuarios 
+ALTER column data_nascimento 
+SET NOT NULL;
+
+-- Challnege 10
+-- Insert records
+INSERT INTO usuarios (nome, data_nascimento, email, senha) 
+VALUES ('Tate I. Dean', '1989-05-01', 'Nunc@etmagnis.edu', 'd3V25D6Y'),
+('Arsenio K. Harmon', '1985-10-23', 'adipiscing.elit@turpis.com', 'm3T58S0C');
